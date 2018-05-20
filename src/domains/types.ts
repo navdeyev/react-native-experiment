@@ -1,3 +1,6 @@
+import {ThunkAction} from 'redux-thunk';
+import {ServiceMap} from 'src/domains/services';
+
 export interface Geo {
     lat: string;
     lng: string;
@@ -27,3 +30,13 @@ export interface User {
     website: string;
     company: Company;
 }
+
+export interface UserDataState {
+    userData: Array<User>
+}
+
+export interface AppState {
+    userDataState: UserDataState
+}
+
+export type AppThunkAction<R> = ThunkAction<R, AppState, ServiceMap>

@@ -7,6 +7,7 @@
     "@types/jest": "^22.2.2",
     "@types/react": "^16.1.0",
     "@types/react-native": "^0.52.21",
+    "@types/react-redux": "^6.0.0",
     "@types/react-test-renderer": "^16.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -55,6 +56,9 @@
     "expo": "^26.0.0",
     "react": "16.3.1",
     "react-native": "0.54.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
     "whatwg-fetch": "^2.0.4"
   }
 }
