@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import UserList from 'src/components/UserList/UserList';
+import UserListContainer from 'src/components/UserList/UserListContainer';
 
 export default class App extends React.Component<{}> {
     render() {
         return (
-            <UserList/>
+            <UserListContainer/>
         );
     }
 }
