@@ -1,34 +1,31 @@
 import * as React from 'react';
+import {connect} from 'react-redux';
 
-import {User} from 'src/domains/types';
+import {AppState, AppThunkAction, User} from 'src/domains/types';
 import UserList from 'src/components/UserList/UserList';
+import * as userDataActions from 'src/domains/userData/userDataActions';
 
 interface Props {
+    userData: Array<User>,
+    loadUserList: () => AppThunkAction<Promise<any>>
 }
 
-interface State {
-    userData: Array<User>
-}
-
-class UserListContainer extends React.Component<Props, State> {
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            userData: []
-        };
-    }
-
+class UserListContainer extends React.Component<Props> {
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(json => this.setState(() => {
-                return {userData: json};
-            }));
+        this.props.loadUserList();
     }
 
     render() {
-        return <UserList userData={this.state.userData}/>;
+        return <UserList userData={this.props.userData}/>;
     }
 }
 
-export default UserListContainer;
+const mapActionCreatorsToProps = {
+    loadUserList: userDataActions.loadUserList
+};
+
+const mapStateToProps = (state: AppState) => ({
+    userData: state.userDataState.userData
+});
+
+export default connect(mapStateToProps, mapActionCreatorsToProps)(UserListContainer);
