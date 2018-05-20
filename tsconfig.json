@@ -12,7 +12,8 @@
     "noEmitHelpers": true,
     "importHelpers": true,
     "strict": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "baseUrl": "."
   },
   "exclude": [
     "node_modules"

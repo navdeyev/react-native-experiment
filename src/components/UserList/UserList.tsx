@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {FlatList, ListRenderItemInfo, StyleSheet, Text} from 'react-native';
 
-import {User} from '../../domains/types';
+import {User} from 'src/domains/types';
 
 interface Props {
 }
