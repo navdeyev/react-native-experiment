@@ -53,6 +53,7 @@ exports[`UserList renderItem renders the component 1`] = `
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  onPress={[Function]}
   style={
     Object {
       "padding": 10,

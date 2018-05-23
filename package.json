@@ -7,6 +7,7 @@
     "@types/jest": "^22.2.2",
     "@types/react": "^16.1.0",
     "@types/react-native": "^0.52.21",
+    "@types/react-navigation": "^1.5.11",
     "@types/react-redux": "^6.0.0",
     "@types/react-test-renderer": "^16.0.0",
     "enzyme": "^3.3.0",
@@ -53,9 +54,10 @@
     }
   },
   "dependencies": {
-    "expo": "^26.0.0",
+    "expo": "27.0.2",
     "react": "16.3.1",
-    "react-native": "0.54.0",
+    "react-native": "^0.55.4",
+    "react-navigation": "1.5.12",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
