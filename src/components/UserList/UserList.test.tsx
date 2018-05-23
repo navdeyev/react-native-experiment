@@ -3,38 +3,17 @@ import {shallow} from 'enzyme';
 import {ListRenderItemInfo} from 'react-native';
 
 import {User} from 'src/domains/types';
+import {user} from 'src/testMockData/userMock';
 
-import UserList, {Props, renderItem} from './UserList';
+import UserList, {keyExtractor, Props, renderItem} from './UserList';
 
 describe('UserList', () => {
 
-    const user: User = {
-        id: 1,
-        name: 'Leanne Graham',
-        username: 'Bret',
-        email: 'Sincere@april.biz',
-        address: {
-            street: 'Kulas Light',
-            suite: 'Apt. 556',
-            city: 'Gwenborough',
-            zipcode: '92998-3874',
-            geo: {
-                lat: '-37.3159',
-                lng: '81.1496'
-            }
-        },
-        phone: '1-770-736-8031 x56442',
-        website: 'hildegard.org',
-        company: {
-            name: 'Romaguera-Crona',
-            catchPhrase: 'Multi-layered client-server neural-net',
-            bs: 'harness real-time e-markets'
-        }
-    };
-
     describe('renderItem', () => {
-        it('renders the component', () => {
-            const item: ListRenderItemInfo<User> = {
+
+        let itemInfo: ListRenderItemInfo<User>;
+        beforeEach(() => {
+            itemInfo = {
                 item: user,
                 index: 1,
                 separators: {
@@ -43,20 +22,37 @@ describe('UserList', () => {
                     updateProps: jest.fn(),
                 }
             };
-            const rendered = shallow(renderItem(item));
+        });
+
+        it('renders the component', () => {
+            const onSelectUser = jest.fn();
+            const rendered = shallow(renderItem(onSelectUser)(itemInfo));
             expect(rendered.text()).toBe('Leanne Graham : Sincere@april.biz');
             expect(rendered.getElement()).toMatchSnapshot();
+        });
+
+        it('executes onSelectUser when row is pressed', () => {
+            const onSelectUser = jest.fn();
+            const rendered = shallow(renderItem(onSelectUser)(itemInfo));
+            rendered.simulate('press');
+            expect(onSelectUser).toHaveBeenCalledWith(itemInfo.item);
         });
     });
 
     describe('UserList', () => {
         it('renders the component', () => {
             const props: Props = {
-                userData: [user]
+                userData: [user],
+                onSelectUser: jest.fn()
             };
             const rendered = shallow(<UserList {...props} />);
             expect(rendered.getElement()).toMatchSnapshot();
         });
     });
 
+    describe('keyExtractor', () => {
+        it('generates a key', () => {
+            expect(keyExtractor(user)).toBe('' + user.id);
+        });
+    });
 });
