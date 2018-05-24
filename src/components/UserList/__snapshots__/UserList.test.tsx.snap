@@ -38,28 +38,89 @@ exports[`UserList UserList renders the component 1`] = `
   onEndReachedThreshold={2}
   renderItem={[Function]}
   scrollEventThrottle={50}
-  style={
-    Object {
-      "marginTop": 25,
-    }
-  }
   updateCellsBatchingPeriod={50}
   windowSize={21}
 />
 `;
 
 exports[`UserList renderItem renders the component 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
-  onPress={[Function]}
+<Component
+  lastChild={false}
   style={
-    Object {
-      "padding": 10,
-    }
+    Array [
+      Object {
+        "borderColor": "#333",
+        "borderRadius": 4,
+        "borderStyle": "solid",
+        "borderWidth": 2,
+        "display": "flex",
+        "flexDirection": "row",
+        "marginBottom": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "paddingTop": 8,
+      },
+      undefined,
+    ]
   }
 >
-  Leanne Graham : Sincere@april.biz
-</Text>
+  <Styled(Text)
+    testID="user-row-text-0"
+  >
+    Bret &lt;Leanne Graham&gt;
+  </Styled(Text)>
+  <Styled(TouchableHighlight)
+    onPress={[Function]}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Details
+    </Text>
+  </Styled(TouchableHighlight)>
+</Component>
+`;
+
+exports[`UserList renderItem renders the component as the last child 1`] = `
+<Component
+  lastChild={true}
+  style={
+    Array [
+      Object {
+        "borderColor": "#333",
+        "borderRadius": 4,
+        "borderStyle": "solid",
+        "borderWidth": 2,
+        "display": "flex",
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "paddingBottom": 8,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "paddingTop": 8,
+      },
+      undefined,
+    ]
+  }
+>
+  <Styled(Text)
+    testID="user-row-text-0"
+  >
+    Bret &lt;Leanne Graham&gt;
+  </Styled(Text)>
+  <Styled(TouchableHighlight)
+    onPress={[Function]}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Details
+    </Text>
+  </Styled(TouchableHighlight)>
+</Component>
 `;

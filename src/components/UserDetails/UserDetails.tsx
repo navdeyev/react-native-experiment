@@ -12,7 +12,7 @@ const UserDetails: React.SFC<Props> = props => {
     return (
         <View>
             <Text>Name: {user.name}</Text>
-            <Text>Username: {user.name}</Text>
+            <Text>Username: {user.username}</Text>
             <Text>Email: {user.email}</Text>
             <Text>Phone: {user.phone}</Text>
         </View>
