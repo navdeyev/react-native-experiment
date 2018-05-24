@@ -16,7 +16,7 @@ exports[`UserDetails renders a component 1`] = `
     ellipsizeMode="tail"
   >
     Username: 
-    Leanne Graham
+    Bret
   </Text>
   <Text
     accessible={true}

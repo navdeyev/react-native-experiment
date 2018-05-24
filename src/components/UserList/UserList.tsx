@@ -1,25 +1,47 @@
 import * as React from 'react';
-import {FlatList, GestureResponderEvent, ListRenderItemInfo, StyleSheet, Text} from 'react-native';
+import styled from 'styled-components/native';
+import {FlatList, ListRenderItemInfo, Text, TouchableHighlight, View} from 'react-native';
 
 import {User} from 'src/domains/types';
 
-const styles = StyleSheet.create({
-    userList: {
-        marginTop: 25,
-    },
-    userRow: {
-        padding: 10
-    }
-});
+interface RowProps {
+    lastChild: boolean
+}
 
-export const renderItem = (onSelectUser: (user: User) => void) =>
+const StyledRow = styled(View)`
+  padding: 8px;
+  display: flex;
+  border-radius: 4px;
+  flex-direction: row;
+  border: 2px solid #333;
+  margin-bottom: ${ (props: RowProps) => props.lastChild ? '0' : '8px'};
+`;
+
+const StyledText = styled(Text)`
+  flex: 1;
+  padding: 7px 8px 7px 0;
+`;
+
+export const StyledTouchableHighlight = styled(TouchableHighlight)`
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #ddd;
+  border: 2px solid #666;
+`;
+
+export const renderItem = (onSelectUser: (user: User) => void, dataLength: number) =>
     (info: ListRenderItemInfo<User>) => {
         const user = info.item;
-        const text = `${ user.name } : ${ user.email }`;
-        const pressHandler = (e: GestureResponderEvent) => {
-            onSelectUser(user);
-        };
-        return <Text style={styles.userRow} onPress={pressHandler}>{text}</Text>;
+        const pressHandler = () => onSelectUser(user);
+        const text = `${ user.username } <${ user.name }>`;
+        return (
+            <StyledRow lastChild={info.index === dataLength - 1}>
+                <StyledText testID={`user-row-text-${info.index}`}>{text}</StyledText>
+                <StyledTouchableHighlight onPress={pressHandler}>
+                    <Text>Details</Text>
+                </StyledTouchableHighlight>
+            </StyledRow>
+        );
     };
 
 export interface Props {
@@ -33,9 +55,8 @@ const UserList: React.SFC<Props> = (props) => {
     const {userData, onSelectUser} = props;
     return (
         <FlatList
-            style={styles.userList}
             data={userData}
-            renderItem={renderItem(onSelectUser)}
+            renderItem={renderItem(onSelectUser, userData.length)}
             keyExtractor={keyExtractor}
         />
     );
