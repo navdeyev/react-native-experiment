@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpandablePanel displays children in expanded state 1`] = `
+<Styled(Component)>
+  <Styled(Component)
+    expanded={true}
+  >
+    <Styled(Component)>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        View a quote of the day
+      </Text>
+    </Styled(Component)>
+    <Switch
+      disabled={false}
+      onValueChange={[Function]}
+      testID="expandable-panel-switch"
+      value={true}
+    />
+  </Styled(Component)>
+  <Styled(Component)>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      A journey of a thousand miles starts with a single step
+    </Text>
+  </Styled(Component)>
+</Styled(Component)>
+`;
+
+exports[`ExpandablePanel does not display children in initial state 1`] = `
+<Styled(Component)>
+  <Styled(Component)
+    expanded={false}
+  >
+    <Styled(Component)>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        View a quote of the day
+      </Text>
+    </Styled(Component)>
+    <Switch
+      disabled={false}
+      onValueChange={[Function]}
+      testID="expandable-panel-switch"
+      value={false}
+    />
+  </Styled(Component)>
+</Styled(Component)>
+`;
