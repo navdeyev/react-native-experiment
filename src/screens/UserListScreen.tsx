@@ -1,9 +1,10 @@
+import i18n from 'i18n-js';
 import * as React from 'react';
 import {View} from 'react-native';
 import {connect} from 'react-redux';
 import styled from 'styled-components';
 
-import {AppState, AppThunkAction, User, NavigateOptions} from 'src/domains/types';
+import {AppState, AppThunkAction, NavigateOptions, User} from 'src/domains/types';
 import UserList from 'src/components/UserList/UserList';
 import * as userDataActions from 'src/domains/userData/userDataActions';
 
@@ -22,7 +23,7 @@ export interface Props {
 }
 
 export class UserListScreen extends React.Component<Props> {
-    static navigationOptions = {title: 'Users'};
+    static navigationOptions = () => ({title: i18n.t('users')});
 
     componentDidMount() {
         this.props.loadUserList();

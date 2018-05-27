@@ -1,3 +1,4 @@
+import i18n from 'i18n-js';
 import * as React from 'react';
 import {Text, View} from 'react-native';
 
@@ -13,12 +14,12 @@ const UserDetails: React.SFC<Props> = props => {
     const {user} = props;
     return (
         <View>
-            <Text>Username: {user.username}</Text>
-            <Text>Name: {user.name}</Text>
-            <Text>Email: {user.email}</Text>
-            <Text>Phone: {user.phone}</Text>
-            <Text>Website: {user.website}</Text>
-            <ExpandablePanel header="Address details">
+            <Text>{`${i18n.t('username')}: ${user.username}`}</Text>
+            <Text>{`${i18n.t('name')}: ${user.name}`}</Text>
+            <Text>{`${i18n.t('email')}: ${user.email}`}</Text>
+            <Text>{`${i18n.t('phone')}: ${user.phone}`}</Text>
+            <Text>{`${i18n.t('website')}: ${user.website}`}</Text>
+            <ExpandablePanel header={i18n.t('addressDetails')}>
                 <AddressDetails address={user.address}/>
             </ExpandablePanel>
         </View>

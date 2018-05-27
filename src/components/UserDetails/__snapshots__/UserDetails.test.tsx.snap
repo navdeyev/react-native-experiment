@@ -7,40 +7,35 @@ exports[`UserDetails renders a component 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    Username: 
-    Bret
+    Username: Bret
   </Text>
   <Text
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    Name: 
-    Leanne Graham
+    Name: Leanne Graham
   </Text>
   <Text
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    Email: 
-    Sincere@april.biz
+    Email: Sincere@april.biz
   </Text>
   <Text
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    Phone: 
-    1-770-736-8031 x56442
+    Phone: 1-770-736-8031 x56442
   </Text>
   <Text
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    Website: 
-    hildegard.org
+    Website: hildegard.org
   </Text>
   <ExpandablePanel
     header="Address details"
