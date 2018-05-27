@@ -1,3 +1,4 @@
+import i18n from 'i18n-js';
 import * as React from 'react';
 import styled from 'styled-components';
 import {FlatList, ListRenderItemInfo, Text, TouchableHighlight, View} from 'react-native';
@@ -38,7 +39,7 @@ export const renderItem = (onSelectUser: (user: User) => void, dataLength: numbe
             <StyledRow lastChild={info.index === dataLength - 1}>
                 <StyledText testID={`user-row-text-${info.index}`}>{text}</StyledText>
                 <StyledTouchableHighlight onPress={pressHandler}>
-                    <Text>Details</Text>
+                    <Text>{i18n.t('details')}</Text>
                 </StyledTouchableHighlight>
             </StyledRow>
         );

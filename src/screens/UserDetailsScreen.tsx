@@ -1,6 +1,7 @@
+import i18n from 'i18n-js';
 import * as React from 'react';
 import {View} from 'react-native';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 import {HasGetParam, User} from 'src/domains/types';
 import UserDetails from 'src/components/UserDetails/UserDetails';
@@ -20,7 +21,7 @@ export interface Props {
 export const navigationOptions = ({navigation}: Props) => {
     const user = navigation.getParam('user');
     return {
-        title: `User details: ${ user.username }`
+        title: `${i18n.t('userDetails')}: ${user.username}`
     };
 };
 
