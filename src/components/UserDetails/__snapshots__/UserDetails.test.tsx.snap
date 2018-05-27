@@ -7,16 +7,16 @@ exports[`UserDetails renders a component 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    Name: 
-    Leanne Graham
+    Username: 
+    Bret
   </Text>
   <Text
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    Username: 
-    Bret
+    Name: 
+    Leanne Graham
   </Text>
   <Text
     accessible={true}
@@ -34,5 +34,32 @@ exports[`UserDetails renders a component 1`] = `
     Phone: 
     1-770-736-8031 x56442
   </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    Website: 
+    hildegard.org
+  </Text>
+  <ExpandablePanel
+    header="Address details"
+    testID="expandable-panel"
+  >
+    <AddressDetails
+      address={
+        Object {
+          "city": "Gwenborough",
+          "geo": Object {
+            "lat": "-37.3159",
+            "lng": "81.1496",
+          },
+          "street": "Kulas Light",
+          "suite": "Apt. 556",
+          "zipcode": "92998-3874",
+        }
+      }
+    />
+  </ExpandablePanel>
 </Component>
 `;
