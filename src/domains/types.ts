@@ -1,5 +1,6 @@
 import {ThunkAction} from 'redux-thunk';
 import {ServiceMap} from 'src/domains/services';
+import {NavigationAction, NavigationParams} from "react-navigation";
 
 export interface Geo {
     lat: string;
@@ -40,3 +41,14 @@ export interface AppState {
 }
 
 export type AppThunkAction<R> = ThunkAction<R, AppState, ServiceMap>
+
+export interface NavigateOptions {
+    routeName: string;
+    params?: NavigationParams;
+    action?: NavigationAction;
+    key?: string;
+}
+
+export interface HasGetParam<P> {
+    getParam: <T extends keyof P>(param: T, fallback?: P[T]) => P[T];
+}

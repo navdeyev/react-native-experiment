@@ -1,10 +1,9 @@
 import * as React from 'react';
 import {View} from 'react-native';
 import {connect} from 'react-redux';
-import {NavigationScreenProps} from 'react-navigation';
 import styled from 'styled-components';
 
-import {AppState, AppThunkAction, User} from 'src/domains/types';
+import {AppState, AppThunkAction, User, NavigateOptions} from 'src/domains/types';
 import UserList from 'src/components/UserList/UserList';
 import * as userDataActions from 'src/domains/userData/userDataActions';
 
@@ -12,15 +11,18 @@ const StyledView = styled(View)`
   padding: 20px;
 `;
 
-interface Props extends NavigationScreenProps {
+interface HasNavigate {
+    navigate: (options: NavigateOptions) => boolean
+}
+
+export interface Props {
+    navigation: HasNavigate,
     userData: Array<User>,
     loadUserList: () => AppThunkAction<Promise<any>>
 }
 
-class UserListScreen extends React.Component<Props> {
-    static navigationOptions = {
-        title: 'Users'
-    };
+export class UserListScreen extends React.Component<Props> {
+    static navigationOptions = {title: 'Users'};
 
     componentDidMount() {
         this.props.loadUserList();
