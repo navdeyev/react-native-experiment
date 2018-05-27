@@ -2,7 +2,7 @@ import * as React from 'react';
 import {View} from 'react-native';
 import {connect} from 'react-redux';
 import {NavigationScreenProps} from 'react-navigation';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 import {AppState, AppThunkAction, User} from 'src/domains/types';
 import UserList from 'src/components/UserList/UserList';

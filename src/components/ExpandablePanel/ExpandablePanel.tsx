@@ -7,13 +7,13 @@ const Wrapper = styled(View)`
   margin-top: 5px;
 `;
 
-const PanelHeaderContainer = styled(View)`
+export const PanelHeaderContainer = styled(View)`
   padding: 4px;
   display: flex;
   flex-direction: row;
   border: 0 solid #333;
   justify-content: space-between;
-  border-bottom-width: ${ (props: State) => props.expanded ? '1px' : '0'};
+  border-bottom-width: ${(props: State) => props.expanded ? '1px' : '0'};
 `;
 
 const PanelHeader = styled(View)`

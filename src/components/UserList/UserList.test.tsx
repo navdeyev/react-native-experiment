@@ -1,3 +1,4 @@
+import 'jest-styled-components';
 import * as React from 'react';
 import {shallow} from 'enzyme';
 import {ListRenderItemInfo} from 'react-native';
@@ -5,7 +6,7 @@ import {ListRenderItemInfo} from 'react-native';
 import {User} from 'src/domains/types';
 import {user} from 'src/testMockData/userMock';
 
-import UserList, {keyExtractor, Props, renderItem, StyledTouchableHighlight} from './UserList';
+import UserList, {keyExtractor, Props, renderItem, StyledRow, StyledTouchableHighlight} from './UserList';
 
 describe('UserList', () => {
 
@@ -66,5 +67,17 @@ describe('UserList', () => {
         it('generates a key', () => {
             expect(keyExtractor(user)).toBe('' + user.id);
         });
+    });
+});
+
+describe('StyledRow', () => {
+    it('adds bottom margin to the component if it is not the last child', () => {
+        const rendered = shallow(<StyledRow lastChild={false}/>);
+        expect(rendered).toHaveStyleRule('margin-bottom', '8px');
+    });
+
+    it('adds removes bottom margin from the component if it is the last child', () => {
+        const rendered = shallow(<StyledRow lastChild={true}/>);
+        expect(rendered).toHaveStyleRule('margin-bottom', '0');
     });
 });
