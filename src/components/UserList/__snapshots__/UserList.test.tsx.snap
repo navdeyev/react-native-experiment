@@ -45,25 +45,8 @@ exports[`UserList UserList renders the component 1`] = `
 
 exports[`UserList renderItem renders the component 1`] = `
 <Component
+  className="sc-bdVaJa dOJfCv"
   lastChild={false}
-  style={
-    Array [
-      Object {
-        "borderColor": "#333",
-        "borderRadius": 4,
-        "borderStyle": "solid",
-        "borderWidth": 2,
-        "display": "flex",
-        "flexDirection": "row",
-        "marginBottom": 8,
-        "paddingBottom": 8,
-        "paddingLeft": 8,
-        "paddingRight": 8,
-        "paddingTop": 8,
-      },
-      undefined,
-    ]
-  }
 >
   <Styled(Text)
     testID="user-row-text-0"
@@ -86,25 +69,8 @@ exports[`UserList renderItem renders the component 1`] = `
 
 exports[`UserList renderItem renders the component as the last child 1`] = `
 <Component
+  className="sc-bdVaJa hRZBlw"
   lastChild={true}
-  style={
-    Array [
-      Object {
-        "borderColor": "#333",
-        "borderRadius": 4,
-        "borderStyle": "solid",
-        "borderWidth": 2,
-        "display": "flex",
-        "flexDirection": "row",
-        "marginBottom": 0,
-        "paddingBottom": 8,
-        "paddingLeft": 8,
-        "paddingRight": 8,
-        "paddingTop": 8,
-      },
-      undefined,
-    ]
-  }
 >
   <Styled(Text)
     testID="user-row-text-0"

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import {FlatList, ListRenderItemInfo, Text, TouchableHighlight, View} from 'react-native';
 
 import {User} from 'src/domains/types';
@@ -8,13 +8,13 @@ interface RowProps {
     lastChild: boolean
 }
 
-const StyledRow = styled(View)`
+export const StyledRow = styled(View)`
   padding: 8px;
   display: flex;
   border-radius: 4px;
   flex-direction: row;
   border: 2px solid #333;
-  margin-bottom: ${ (props: RowProps) => props.lastChild ? '0' : '8px'};
+  margin-bottom: ${(props: RowProps) => props.lastChild ? '0' : '8px'};
 `;
 
 const StyledText = styled(Text)`
