@@ -7,6 +7,7 @@ const en = {
     website: 'Webseite',
 
     addressDetails: 'Adressen Einzelheiten',
+    edit: 'Redigieren',
 
     users: 'Benutzern',
     userDetails: 'Benutzer Einzelheiten'

@@ -2,10 +2,12 @@ import {NavigationRouteConfigMap, StackNavigator, StackNavigatorConfig} from 're
 
 import UserDetailsScreen from './UserDetailsScreen';
 import UserListScreen from './UserListScreen';
+import UserDetailsFormScreen from './UserDetailsFormScreen';
 
 const routeConfig: NavigationRouteConfigMap = {
     UserList: {screen: UserListScreen},
-    UserDetails: {screen: UserDetailsScreen}
+    UserDetails: {screen: UserDetailsScreen},
+    UserDetailsForm: { screen: UserDetailsFormScreen}
 };
 
 const stackConfig: StackNavigatorConfig = {

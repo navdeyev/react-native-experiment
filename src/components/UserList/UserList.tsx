@@ -1,7 +1,7 @@
 import i18n from 'i18n-js';
 import * as React from 'react';
 import styled from 'styled-components';
-import {FlatList, ListRenderItemInfo, Text, TouchableHighlight, View} from 'react-native';
+import {Button, FlatList, ListRenderItemInfo, Text, View} from 'react-native';
 
 import {User} from 'src/domains/types';
 
@@ -23,13 +23,6 @@ const StyledText = styled(Text)`
   padding: 7px 8px 7px 0;
 `;
 
-export const StyledTouchableHighlight = styled(TouchableHighlight)`
-  padding: 5px 10px;
-  border-radius: 4px;
-  background-color: #ddd;
-  border: 2px solid #666;
-`;
-
 export const renderItem = (onSelectUser: (user: User) => void, dataLength: number) =>
     (info: ListRenderItemInfo<User>) => {
         const user = info.item;
@@ -38,9 +31,9 @@ export const renderItem = (onSelectUser: (user: User) => void, dataLength: numbe
         return (
             <StyledRow lastChild={info.index === dataLength - 1}>
                 <StyledText testID={`user-row-text-${info.index}`}>{text}</StyledText>
-                <StyledTouchableHighlight onPress={pressHandler}>
-                    <Text>{i18n.t('details')}</Text>
-                </StyledTouchableHighlight>
+                <Button title={i18n.t('details')}
+                        onPress={pressHandler}
+                        testID={`view-details-button-${info.index}`}/>
             </StyledRow>
         );
     };

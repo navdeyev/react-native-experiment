@@ -1,6 +1,7 @@
 import {ThunkAction} from 'redux-thunk';
+import {NavigationAction, NavigationParams} from 'react-navigation';
+
 import {ServiceMap} from 'src/domains/services';
-import {NavigationAction, NavigationParams} from "react-navigation";
 
 export interface Geo {
     lat: string;
@@ -51,4 +52,8 @@ export interface NavigateOptions {
 
 export interface HasGetParam<P> {
     getParam: <T extends keyof P>(param: T, fallback?: P[T]) => P[T];
+}
+
+export interface HasNavigate {
+    navigate: (options: NavigateOptions) => boolean
 }

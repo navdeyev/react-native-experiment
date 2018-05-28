@@ -1,21 +1,16 @@
 import i18n from 'i18n-js';
 import * as React from 'react';
-import {View} from 'react-native';
-import styled from 'styled-components';
 
-import {HasGetParam, User} from 'src/domains/types';
+import {HasGetParam, HasNavigate, User} from 'src/domains/types';
 import UserDetails from 'src/components/UserDetails/UserDetails';
-
-const StyledView = styled(View)`
-  padding: 20px;
-`;
+import ScreenLayout from 'src/components/ScreenLayout/ScreenLayout';
 
 interface ScreenParams {
     user: User
 }
 
 export interface Props {
-    navigation: HasGetParam<ScreenParams>
+    navigation: HasGetParam<ScreenParams> & HasNavigate
 }
 
 export const navigationOptions = ({navigation}: Props) => {
@@ -30,10 +25,18 @@ class UserDetailsScreen extends React.Component<Props> {
 
     render() {
         const user: User = this.props.navigation.getParam('user');
+
+        const onEditUserHandler = () => {
+            this.props.navigation.navigate({
+                routeName: 'UserDetailsForm',
+                params: {user}
+            });
+        };
+
         return (
-            <StyledView>
-                <UserDetails user={user}/>
-            </StyledView>
+            <ScreenLayout>
+                <UserDetails user={user} onEditUser={onEditUserHandler}/>
+            </ScreenLayout>
         );
     }
 }

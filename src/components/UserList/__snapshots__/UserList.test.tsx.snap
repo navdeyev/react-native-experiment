@@ -53,17 +53,11 @@ exports[`UserList renderItem renders the component 1`] = `
   >
     Bret &lt;Leanne Graham&gt;
   </Styled(Text)>
-  <Styled(TouchableHighlight)
+  <Button
     onPress={[Function]}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
-      Details
-    </Text>
-  </Styled(TouchableHighlight)>
+    testID="view-details-button-0"
+    title="Details"
+  />
 </Component>
 `;
 
@@ -77,16 +71,10 @@ exports[`UserList renderItem renders the component as the last child 1`] = `
   >
     Bret &lt;Leanne Graham&gt;
   </Styled(Text)>
-  <Styled(TouchableHighlight)
+  <Button
     onPress={[Function]}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
-      Details
-    </Text>
-  </Styled(TouchableHighlight)>
+    testID="view-details-button-0"
+    title="Details"
+  />
 </Component>
 `;
