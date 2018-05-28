@@ -2,12 +2,16 @@
 
 exports[`UserDetailsFormScreen renders a component 1`] = `
 <Styled(Component)>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-  >
-    Bret
-  </Text>
+  <ReduxForm
+    initialValues={
+      Object {
+        "email": "Sincere@april.biz",
+        "name": "Leanne Graham",
+        "phone": "1-770-736-8031 x56442",
+        "username": "Bret",
+        "website": "hildegard.org",
+      }
+    }
+  />
 </Styled(Component)>
 `;
