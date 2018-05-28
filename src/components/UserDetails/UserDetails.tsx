@@ -1,17 +1,23 @@
 import i18n from 'i18n-js';
 import * as React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 
 import {User} from 'src/domains/types';
 import AddressDetails from 'src/components/AddressDetails/AddressDetails';
 import ExpandablePanel from 'src/components/ExpandablePanel/ExpandablePanel';
 
-interface Props {
+export interface Props {
     user: User;
+    onEditUser: (user: User) => void;
 }
 
 const UserDetails: React.SFC<Props> = props => {
-    const {user} = props;
+    const {user, onEditUser} = props;
+
+    const onPressHandler = () => {
+        onEditUser(user);
+    };
+
     return (
         <View>
             <Text>{`${i18n.t('username')}: ${user.username}`}</Text>
@@ -22,6 +28,9 @@ const UserDetails: React.SFC<Props> = props => {
             <ExpandablePanel header={i18n.t('addressDetails')}>
                 <AddressDetails address={user.address}/>
             </ExpandablePanel>
+            <Button title={i18n.t('edit')}
+                    onPress={onPressHandler}
+                    testID="edit-user-details-button"/>
         </View>
     );
 };

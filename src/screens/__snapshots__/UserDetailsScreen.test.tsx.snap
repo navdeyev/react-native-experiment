@@ -3,6 +3,7 @@
 exports[`UserDetailsScreen renders a component 1`] = `
 <Styled(Component)>
   <UserDetails
+    onEditUser={[Function]}
     user={
       Object {
         "address": Object {

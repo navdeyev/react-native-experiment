@@ -56,5 +56,10 @@ exports[`UserDetails renders a component 1`] = `
       }
     />
   </ExpandablePanel>
+  <Button
+    onPress={[Function]}
+    testID="edit-user-details-button"
+    title="Edit"
+  />
 </Component>
 `;

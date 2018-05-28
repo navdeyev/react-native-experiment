@@ -6,7 +6,7 @@ import {ListRenderItemInfo} from 'react-native';
 import {User} from 'src/domains/types';
 import {user} from 'src/testMockData/userMock';
 
-import UserList, {keyExtractor, Props, renderItem, StyledRow, StyledTouchableHighlight} from './UserList';
+import UserList, {keyExtractor, Props, renderItem, StyledRow} from './UserList';
 
 describe('UserList', () => {
 
@@ -46,7 +46,7 @@ describe('UserList', () => {
         it('executes onSelectUser when row is pressed', () => {
             const onSelectUser = jest.fn();
             const rendered = shallow(renderItem(onSelectUser, 1)(itemInfo));
-            const highlight = rendered.find(StyledTouchableHighlight);
+            const highlight = rendered.find('[testID="view-details-button-0"]');
             highlight.simulate('press');
             expect(onSelectUser).toHaveBeenCalledWith(itemInfo.item);
         });

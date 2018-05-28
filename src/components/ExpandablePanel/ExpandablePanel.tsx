@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled(View)`
   border: 1px solid #333;
-  margin-top: 5px;
+  margin: 5px 0;
 `;
 
 export const PanelHeaderContainer = styled(View)`
