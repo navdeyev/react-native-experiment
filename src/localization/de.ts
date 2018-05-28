@@ -8,6 +8,7 @@ const en = {
 
     addressDetails: 'Adressen Einzelheiten',
     edit: 'Redigieren',
+    submit: 'Einreichen',
 
     users: 'Benutzern',
     userDetails: 'Benutzer Einzelheiten'

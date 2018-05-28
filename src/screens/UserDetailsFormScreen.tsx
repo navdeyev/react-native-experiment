@@ -1,9 +1,10 @@
 import i18n from 'i18n-js';
+import {omit} from 'ramda';
 import * as React from 'react';
-import {Text} from 'react-native';
 
 import {HasGetParam, User} from 'src/domains/types';
 import ScreenLayout from 'src/components/ScreenLayout/ScreenLayout';
+import UserDetailsForm from 'src/components/UserDetailsForm/UserDetailsFrom';
 
 interface ScreenParams {
     user: User
@@ -25,10 +26,11 @@ class UserDetailsFormScreen extends React.Component<Props> {
 
     render() {
         const user: User = this.props.navigation.getParam('user');
+        const initialValues = omit(['id', 'address', 'company'])(user);
 
         return (
             <ScreenLayout>
-                <Text>{user.username}</Text>
+                <UserDetailsForm initialValues={initialValues}/>
             </ScreenLayout>
         );
     }

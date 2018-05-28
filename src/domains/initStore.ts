@@ -1,5 +1,6 @@
 import {AnyAction, applyMiddleware, createStore, Store} from 'redux';
 import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import rootReducer from 'src/domains/rootReducer';
 import {createServiceMap} from 'src/domains/services';
@@ -13,8 +14,9 @@ const initStore = (): Store<AppState> => {
         thunkMiddleware
     ];
     const enhancer = applyMiddleware(...middlewares);
+    const composedEnhancer = composeWithDevTools(enhancer);
 
-    return createStore<AppState, AnyAction, {}, {}>(rootReducer, enhancer);
+    return createStore<AppState, AnyAction, {}, {}>(rootReducer, composedEnhancer);
 };
 
 export default initStore;
