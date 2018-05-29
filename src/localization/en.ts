@@ -11,7 +11,9 @@ const en = {
     submit: 'Submit',
 
     users: 'Users',
-    userDetails: 'User details'
+    userDetails: 'User details',
+
+    mandatoryError: 'Please add a value'
 };
 
 export default en;

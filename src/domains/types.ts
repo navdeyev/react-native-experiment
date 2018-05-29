@@ -23,14 +23,18 @@ export interface Company {
     bs: string;
 }
 
-export interface User {
+export type UserDetailsFormData = {
+    [index:string]: any;
     id: number;
     name: string;
     username: string;
     email: string;
-    address: Address;
     phone: string;
     website: string;
+}
+
+export interface User extends UserDetailsFormData {
+    address: Address;
     company: Company;
 }
 

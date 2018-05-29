@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDetailsForm renders a component 1`] = `
+<Component>
+  <Field
+    component={[Function]}
+    label="Name"
+    name="name"
+  />
+  <Field
+    component={[Function]}
+    label="Username"
+    name="username"
+  />
+  <Field
+    component={[Function]}
+    label="Email"
+    name="email"
+  />
+  <Field
+    component={[Function]}
+    label="Phone"
+    name="phone"
+  />
+  <Field
+    component={[Function]}
+    label="Website"
+    name="website"
+  />
+  <Button
+    onPress={[MockFunction]}
+    testID="user-details-form-submit-button"
+    title="Submit"
+  />
+</Component>
+`;
