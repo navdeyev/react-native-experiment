@@ -4,7 +4,9 @@ import * as React from 'react';
 
 import {HasGetParam, User} from 'src/domains/types';
 import ScreenLayout from 'src/components/ScreenLayout/ScreenLayout';
-import UserDetailsForm from 'src/components/UserDetailsForm/UserDetailsFrom';
+import UserDetailsForm from 'src/components/UserDetailsForm/UserDetailsForm';
+
+import validate from 'src/domains/userDetailsForm/userDetailsFormService';
 
 interface ScreenParams {
     user: User
@@ -30,7 +32,7 @@ class UserDetailsFormScreen extends React.Component<Props> {
 
         return (
             <ScreenLayout>
-                <UserDetailsForm initialValues={initialValues}/>
+                <UserDetailsForm initialValues={initialValues} onSubmit={validate}/>
             </ScreenLayout>
         );
     }

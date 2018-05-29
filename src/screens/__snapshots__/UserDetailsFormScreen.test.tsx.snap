@@ -12,6 +12,7 @@ exports[`UserDetailsFormScreen renders a component 1`] = `
         "website": "hildegard.org",
       }
     }
+    onSubmit={[Function]}
   />
 </Styled(Component)>
 `;

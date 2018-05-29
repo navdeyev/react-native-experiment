@@ -11,7 +11,9 @@ const en = {
     submit: 'Einreichen',
 
     users: 'Benutzern',
-    userDetails: 'Benutzer Einzelheiten'
+    userDetails: 'Benutzer Einzelheiten',
+
+    mandatoryError: 'Bitte fügen Sie einen Wert hinzu'
 };
 
 export default en;

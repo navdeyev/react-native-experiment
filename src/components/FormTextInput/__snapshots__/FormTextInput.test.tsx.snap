@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormTextInput renders the TextInput 1`] = `
+<Styled(Component)>
+  <Styled(TextInput)
+    onChangeText={[MockFunction]}
+    value=""
+  />
+</Styled(Component)>
+`;
+
+exports[`FormTextInput renders the TextInput 2`] = `
+<Styled(Component)>
+  <Styled(Text)
+    testID="form-text-input-label"
+  >
+    Field label
+  </Styled(Text)>
+  <Styled(TextInput)
+    onChangeText={[MockFunction]}
+    value=""
+  />
+  <Styled(Text)
+    testID="form-text-input-error"
+  >
+    Please add a value
+  </Styled(Text)>
+</Styled(Component)>
+`;
