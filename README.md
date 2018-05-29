@@ -17,6 +17,8 @@ I wanted to familiarize myself with:
 At the moment the app loads a list of users from https://jsonplaceholder.typicode.com/users. 
 The starting screen renders the list of users, providing the option of viewing detailed info on each one of them.
 User details are displayed on a separate screen. The details screen has an expandable section with user's address.
+There is an option to edit the user details, which takes the user to a simple form with basic mandatory field validation.
+At the moment, the changes done in the form are not saved.
 
 ## About
 This project has been initialised with Create React Native App.
