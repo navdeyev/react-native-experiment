@@ -10,6 +10,7 @@ export const initLocale = () => {
         en_US: en,
         de
     };
+    //TODO: find out if there is a way to request the locale from the device.
     i18n.locale = 'en';
     return Promise.resolve();
 };
