@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {Provider} from 'react-redux';
 
-import initStore from 'src/domains/initStore';
-import {initLocale} from 'src/localization/setupInternationalization';
-import Navigator from 'src/screens/Navigator';
+import initStore from './domains/initStore';
+import {initLocale} from './localization/setupInternationalization';
+import Navigator from './screens/Navigator';
 
 const store = initStore();
 

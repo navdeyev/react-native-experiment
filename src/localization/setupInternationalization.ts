@@ -1,4 +1,3 @@
-import Expo from 'expo';
 import i18n from 'i18n-js';
 
 import en from './en';
@@ -11,8 +10,6 @@ export const initLocale = () => {
         en_US: en,
         de
     };
-
-    return Expo.Util.getCurrentLocaleAsync().then((locale: string) => {
-        i18n.locale = locale;
-    });
+    i18n.locale = 'en';
+    return Promise.resolve();
 };
