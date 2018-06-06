@@ -1,6 +1,6 @@
 import Mock = jest.Mock;
-import {User} from 'src/domains/types';
-import {loadUserList, UserDataActions} from 'src/domains/userData/userDataActions';
+import {User} from '../types';
+import {loadUserList, UserDataActions} from './userDataActions';
 
 describe('loadUserList', () => {
 

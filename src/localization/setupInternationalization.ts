@@ -1,8 +1,8 @@
 import Expo from 'expo';
 import i18n from 'i18n-js';
 
-import en from 'src/localization/en';
-import de from 'src/localization/de';
+import en from './en';
+import de from './de';
 
 export const initLocale = () => {
     i18n.fallbacks = true;

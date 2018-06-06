@@ -1,4 +1,4 @@
-import {Address, Geo} from 'src/domains/types';
+import {Address, Geo} from '../domains/types';
 
 export const geo: Geo = {
     lat: '-37.3159',

@@ -1,4 +1,4 @@
-import {User} from 'src/domains/types';
+import {User} from '../domains/types';
 
 import {address} from './addressMock';
 import {company} from './companyMock';

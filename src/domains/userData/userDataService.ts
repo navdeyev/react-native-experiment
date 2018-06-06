@@ -1,4 +1,4 @@
-import {User} from 'src/domains/types';
+import {User} from '../types';
 
 export interface UserDataService {
     fetchUsers: () => Promise<Array<User>>

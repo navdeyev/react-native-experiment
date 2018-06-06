@@ -1,4 +1,4 @@
-import {createUserDataService, UserDataService} from 'src/domains/userData/userDataService';
+import {createUserDataService, UserDataService} from './userData/userDataService';
 
 export interface ServiceMap {
     userDataService: UserDataService

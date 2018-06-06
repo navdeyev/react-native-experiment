@@ -2,11 +2,11 @@ import i18n from 'i18n-js';
 import * as React from 'react';
 import {connect} from 'react-redux';
 
-import {AppState, AppThunkAction, HasNavigate, User} from 'src/domains/types';
-import * as userDataActions from 'src/domains/userData/userDataActions';
+import {AppState, AppThunkAction, HasNavigate, User} from '../domains/types';
+import * as userDataActions from '../domains/userData/userDataActions';
 
-import UserList from 'src/components/UserList/UserList';
-import ScreenLayout from 'src/components/ScreenLayout/ScreenLayout';
+import UserList from '../components/UserList/UserList';
+import ScreenLayout from '../components/ScreenLayout/ScreenLayout';
 
 export interface Props {
     navigation: HasNavigate,

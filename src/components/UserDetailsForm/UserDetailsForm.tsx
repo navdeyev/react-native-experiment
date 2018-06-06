@@ -1,11 +1,10 @@
 import i18n from 'i18n-js';
 import * as React from 'react';
 import {Button, View} from 'react-native';
-import {reduxForm, ConfigProps, Field, InjectedFormProps, FormSubmitHandler} from 'redux-form';
+import {reduxForm, ConfigProps, Field, InjectedFormProps, FormSubmitHandler, SubmitHandler} from 'redux-form';
 
-import {UserDetailsFormData} from 'src/domains/types';
-import FormTextInput from 'src/components/FormTextInput/FormTextInput';
-import {SubmitHandler} from "redux-form/lib/reduxForm";
+import {UserDetailsFormData} from '../../domains/types';
+import FormTextInput from '../FormTextInput/FormTextInput';
 
 export interface FormProps {
     handleSubmit: SubmitHandler<UserDetailsFormData, Props>;

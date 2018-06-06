@@ -1,4 +1,4 @@
-import {Company} from 'src/domains/types';
+import {Company} from '../domains/types';
 
 export const company: Company = {
     name: 'Romaguera-Crona',

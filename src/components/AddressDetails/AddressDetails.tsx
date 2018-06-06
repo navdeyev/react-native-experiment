@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Text, View} from 'react-native';
 
-import {Address} from 'src/domains/types';
+import {Address} from '../../domains/types';
 
 interface Props {
     address: Address

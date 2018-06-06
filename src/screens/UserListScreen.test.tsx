@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {shallow} from 'enzyme';
 
-import {user} from 'src/testMockData/userMock';
-import UserList from 'src/components/UserList/UserList';
+import {user} from '../testMockData/userMock';
+import UserList from '../components/UserList/UserList';
 
 import {Props, UserListScreen} from './UserListScreen';
 

@@ -2,9 +2,9 @@ import * as React from 'react';
 import {shallow} from 'enzyme';
 
 import UserDetailsScreen, {navigationOptions, Props} from './UserDetailsScreen';
-import UserDetails from 'src/components/UserDetails/UserDetails';
+import UserDetails from '../components/UserDetails/UserDetails';
 
-import {user} from 'src/testMockData/userMock';
+import {user} from '../testMockData/userMock';
 
 describe('UserDetailsScreen', () => {
 

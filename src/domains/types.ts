@@ -1,8 +1,8 @@
-import {ThunkAction} from 'redux-thunk';
 import {NavigationAction, NavigationParams} from 'react-navigation';
+import {FormStateMap} from 'redux-form/lib/reducer';
+import {ThunkAction} from 'redux-thunk';
 
-import {ServiceMap} from 'src/domains/services';
-import {FormStateMap} from "redux-form/lib/reducer";
+import {ServiceMap} from './services';
 
 export interface Geo {
     lat: string;
