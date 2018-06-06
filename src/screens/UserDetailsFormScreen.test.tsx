@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 
 import UserDetailsFormScreen, {navigationOptions, Props} from './UserDetailsFormScreen';
 
-import {user} from 'src/testMockData/userMock';
+import {user} from '../testMockData/userMock';
 
 describe('UserDetailsFormScreen', () => {
 

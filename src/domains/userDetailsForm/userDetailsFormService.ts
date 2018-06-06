@@ -1,7 +1,7 @@
 import i18n from 'i18n-js';
 import {isEmpty} from 'ramda';
 import {FormErrors, SubmissionError} from 'redux-form';
-import {UserDetailsFormData} from 'src/domains/types';
+import {UserDetailsFormData} from '../types';
 
 export const runEmptyValidation = (formValues: UserDetailsFormData) => {
     const isFieldEmpty = (key: string) => isEmpty(formValues[key]);

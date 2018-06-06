@@ -3,8 +3,8 @@ import * as React from 'react';
 import {shallow} from 'enzyme';
 import {ListRenderItemInfo} from 'react-native';
 
-import {User} from 'src/domains/types';
-import {user} from 'src/testMockData/userMock';
+import {User} from '../../domains/types';
+import {user} from '../../testMockData/userMock';
 
 import UserList, {keyExtractor, Props, renderItem, StyledRow} from './UserList';
 

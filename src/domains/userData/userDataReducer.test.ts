@@ -1,6 +1,6 @@
-import {userData} from 'src/domains/userData/userDataReducer';
+import {userData} from './userDataReducer';
 import {UserDataActions} from './userDataActions';
-import {User} from 'src/domains/types';
+import {User} from '../types';
 
 describe('userData', () => {
 

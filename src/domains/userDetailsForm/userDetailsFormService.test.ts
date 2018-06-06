@@ -1,6 +1,6 @@
 import {SubmissionError} from 'redux-form';
 
-import {UserDetailsFormData} from 'src/domains/types';
+import {UserDetailsFormData} from '../types';
 import {runEmptyValidation} from './userDetailsFormService';
 
 describe('runEmptyValidation', () => {

@@ -1,9 +1,9 @@
 import i18n from 'i18n-js';
 import * as React from 'react';
 
-import {HasGetParam, HasNavigate, User} from 'src/domains/types';
-import UserDetails from 'src/components/UserDetails/UserDetails';
-import ScreenLayout from 'src/components/ScreenLayout/ScreenLayout';
+import {HasGetParam, HasNavigate, User} from '../domains/types';
+import UserDetails from '../components/UserDetails/UserDetails';
+import ScreenLayout from '../components/ScreenLayout/ScreenLayout';
 
 interface ScreenParams {
     user: User

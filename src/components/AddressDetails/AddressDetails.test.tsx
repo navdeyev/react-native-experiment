@@ -2,7 +2,7 @@ import * as React from 'react';
 import {shallow} from 'enzyme';
 
 import AddressDetails from './AddressDetails';
-import {address} from 'src/testMockData/addressMock';
+import {address} from '../../testMockData/addressMock';
 
 describe('AddressDetails', () => {
 

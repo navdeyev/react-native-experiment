@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {shallow} from 'enzyme';
 
-import {user} from 'src/testMockData/userMock';
+import {user} from '../../testMockData/userMock';
 
 import UserDetails, {Props} from './UserDetails';
 

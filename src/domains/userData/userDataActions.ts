@@ -1,6 +1,6 @@
 import {Dispatch} from 'react-redux';
-import {ServiceMap} from 'src/domains/services';
-import {AppState, AppThunkAction} from 'src/domains/types';
+import {ServiceMap} from '../services';
+import {AppState, AppThunkAction} from '../types';
 
 export enum UserDataActions {
     LOAD = 'LOAD',

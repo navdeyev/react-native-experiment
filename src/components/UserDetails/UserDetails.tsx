@@ -2,9 +2,9 @@ import i18n from 'i18n-js';
 import * as React from 'react';
 import {Button, Text, View} from 'react-native';
 
-import {User} from 'src/domains/types';
-import AddressDetails from 'src/components/AddressDetails/AddressDetails';
-import ExpandablePanel from 'src/components/ExpandablePanel/ExpandablePanel';
+import {User} from '../../domains/types';
+import AddressDetails from '../AddressDetails/AddressDetails';
+import ExpandablePanel from '../ExpandablePanel/ExpandablePanel';
 
 export interface Props {
     user: User;

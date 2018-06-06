@@ -3,7 +3,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import {Button, FlatList, ListRenderItemInfo, Text, View} from 'react-native';
 
-import {User} from 'src/domains/types';
+import {User} from '../../domains/types';
 
 interface RowProps {
     lastChild: boolean
