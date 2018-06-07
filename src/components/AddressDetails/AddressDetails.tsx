@@ -10,7 +10,7 @@ interface Props {
 const AddressDetails: React.SFC<Props> = props => {
     const {address} = props;
     return (
-        <View>
+        <View testID="address-details">
             <Text>{address.street}</Text>
             <Text>{address.suite}</Text>
             <Text>{address.city}</Text>
