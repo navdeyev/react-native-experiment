@@ -38,3 +38,12 @@ This setup allows to actually build and run a standalone app on a virtual device
 To run the app start by executing `yarn tsc` command in a terminal. 
 Open another terminal and execute `yarn android` or `yarn ios`, depending on which development environment you have.
 This will execute the packager and open the virtual device to run the app.
+
+## e2e
+Running e2e tests written with detox.
+
+        - Transform TS to JS by executing `yarn tssc`
+        - Run detox build, which will build the app and enrich it with hooks necessary for running detox tests
+        - Launch the android emulator
+        - Run `yarn android` to install the app and launch it in the emulator
+        - Run `yarn test:e2e` to run e2e tests. 

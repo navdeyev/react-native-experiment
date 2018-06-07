@@ -49,6 +49,7 @@ const UserList: React.SFC<Props> = (props) => {
     const {userData, onSelectUser} = props;
     return (
         <FlatList
+            testID="user-list"
             data={userData}
             renderItem={renderItem(onSelectUser, userData.length)}
             keyExtractor={keyExtractor}
