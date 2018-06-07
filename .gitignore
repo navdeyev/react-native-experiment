@@ -5,6 +5,9 @@
 #build
 build/
 
+#android
+android/.gradle
+
 # expo
 .expo/
 
